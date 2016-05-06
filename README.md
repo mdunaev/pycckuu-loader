@@ -77,7 +77,7 @@ super | супер
 switch | перебрать
 this | тут
 throw | бросить
-try | попробывать
+try | попробовать
 typeof( | тип(
 var  | пер 
 void | пусто
