@@ -56,7 +56,7 @@ module.exports = function(content) {
     [/\.карта\(/g, '.map('],                             // map
     [/\.свести\(/g, '.reduce('],                         // reduce
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
-    [/\.длинна/g, '.length'],                            // length
+    [/\.длина/g, '.length'],                             // length
   ].forEach(function(en) {
     content = content.replace(en[0], en[1]);
   });
