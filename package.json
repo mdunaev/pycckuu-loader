@@ -1,6 +1,6 @@
 {
   "name": "pycckuu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Russian version of JavaScript",
   "main": "index.js",
   "scripts": {
