@@ -1,4 +1,4 @@
-module.exports = function(content) {
+module.exports = function(содержимое) {
   [
     [/внимание\s*\(/g, 'alert('],                        // alert
     [/консоль\./g, 'console.'],                          // console
@@ -57,9 +57,9 @@ module.exports = function(content) {
     [/\.свести\(/g, '.reduce('],                         // reduce
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
     [/\.длина/g, '.length'],                             // length
-  ].forEach(function(en) {
-    content = content.replace(en[0], en[1]);
+  ].forEach(function(англ) {
+    содержимое = содержимое.replace(англ[0], англ[1]);
   });
 
-  return content;
+  return содержимое;
 }
