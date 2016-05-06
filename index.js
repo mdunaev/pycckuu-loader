@@ -1,64 +1,64 @@
 module.exports = function(content) {
   [
-    ['alert',      'внимание\s*\(',                  'alert('],
-    ['console',    'консоль\.',                      'console.'],
-    ['log',        'console\.(логировать|лог)\s*\(', 'console.log('],
-    ['break',      'стоп(;|\s+)',                    'break$1'],
-    ['case',       'случай\s+',                      'case '],
-    ['class',      'класс\s+',                       'class '],
-    ['catch',      'поймать\s*\(',                   'catch('],
-    ['const',      'константа\s+',                   'const '],
-    ['continue',   'продолжить(;|\s+)',              'continue$1'],
-    ['default',    'поумолчанию\s*:',                'default:'],
-    ['delete',     'удалить\s+',                     'delete '],
-    ['do',         'сделай(\s*{|\s+)',               'do$1'],
-    ['else',       'иначе(\s+|\{)',                  'else$1'],
-    ['export',     'экспортировать\s+',              'export '],
-    ['extends',    '\s+расширяет\s+',                ' extends '],
-    ['finally',    'вконце(\s+|\{)',                 'finally$1'],
-    ['for',        'цикл(\s*\()',                    'for ('],
-    ['function',   'функция(\s+|\()',                'function$1'],
-    ['if',         'если\s*\(',                      'if ('],
-    ['import',     'импортировать\s+',               'import '],
-    [' in ',       '\s+в\s+',                        ' in '],
-    ['instanceof', '\s+экземпляр(\s+|\()',           ' instanceof$1'],
-    ['let',        'пусть\s+',                       'let '],
-    ['new',        'новый\s+',                       'new '],
-    [' of ',       '\s+из\s+',                       ' of '],
-    ['return',     'вернуть\s+',                     'return '],
-    ['super',      'супер\s*(',                      'super('],
-    ['switch',     'перебрать\s*\(',                 'switch ('],
-    ['this',       'тут|этот',                       ' this'],
-    ['throw',      'бросить\s+',                     'throw '],
-    ['try',        'попробывать(\s+|\s*{)',          'try$1'],
-    ['typeof',     'тип(\s+|\s*\()',                 'typeof$1'],
-    ['var ',       'пер(еменная)?\s+',               'var '],
-    ['void',       'пусто\s*\(',                     'void('],
-    ['while',      'пока\s*\(',                      'while ('],
-    ['with',       'совместно\s*\(',                 'with ('],
-    ['yield',      'уступить\s+',                    'yield '],
-    ['pop',        '\.сократить\(\)',                '.pop()'],
-    ['push',       '\.добавить\(',                   '.push('],
-    ['reverse',    '\.отразить\(\)',                 '.reverse()'],
-    ['shift',      '\.сдвинуть\(\)',                 '.shift()'],
-    ['sort',       '\.сортировать\(',                '.sort('],
-    ['splice',     '\.соединить\(',                  '.splice('],
-    ['unshift',    '\.раздвинуть\(',                 '.unshift('],
-    ['concat',     '\.связать\(',                    '.concat('],
-    ['join',       '\.объединить\(',                 '.join('],
-    ['slice',      '\.срез\(',                       '.slice('],
-    ['toString',   '\.в(c|С)троку\(\)',              '.toSrtring()'],
-    ['indexOf',    '\.номер(В|в)\(',                 '.indexOf('],
-    ['forEach',    '\.для(К|к)аждого\(',             '.forEach('],
-    ['every',      '\.каждый\(',                     '.every('],
-    ['some',       '\.хоть(О|о)дин\(',               '.some('],
-    ['filter',     '\.фильтр\(',                     '.filter('],
-    ['map',        '\.карта\(',                      '.map('],
-    ['reduce',     '\.свести\(',                     '.reduce('],
-    ['prototype',  '\.прототип(\.|\s+)',             '.prototype$1'],
-    ['length  ',   '\.длинна',                       '.length'],
+    [/внимание\s*\(/g, 'alert('],                        // alert
+    [/консоль\./g, 'console.'],                          // console
+    [/console\.(логировать|лог)\s*\(/g, 'console.log('], // log
+    [/стоп(;|\s+)/g, 'break$1'],                         // break
+    [/случай\s+/g, 'case '],                             // case
+    [/класс\s+/g, 'class '],                             // class
+    [/поймать\s*\(/g, 'catch('],                         // catch
+    [/константа\s+/g, 'const '],                         // const
+    [/продолжить(;|\s+)/g, 'continue$1'],                // continue
+    [/поумолчанию\s*:/g, 'default:'],                    // default
+    [/удалить\s+/g, 'delete '],                          // delete
+    [/сделай(\s*{|\s+)/g, 'do$1'],                       // do
+    [/иначе(\s+|\{)/g, 'else$1'],                        // else
+    [/экспортировать\s+/g, 'export '],                   // export
+    [/\s+расширяет\s+/g, ' extends '],                   // extends
+    [/вконце(\s+|\{)/g, 'finally$1'],                    // finally
+    [/цикл(\s*\()/g, 'for ('],                           // for
+    [/функция(\s+|\()/g, 'function$1'],                  // function
+    [/если\s*\(/g, 'if ('],                              // if
+    [/импортировать\s+/g, 'import '],                    // import
+    [/\s+в\s+/g, ' in '],                                // in
+    [/\s+экземпляр(\s+|\()/g, ' instanceof$1'],          // instanceo
+    [/пусть\s+/g, 'let '],                               // let
+    [/новый\s+/g, 'new '],                               // new
+    [/\s+из\s+/g, ' of '],                               // of
+    [/вернуть\s+/g, 'return '],                          // return
+    [/супер\s*\(/g, 'super('],                           // super
+    [/перебрать\s*\(/g, 'switch ('],                     // switch
+    [/тут|этот/g, ' this'],                              // this
+    [/бросить\s+/g, 'throw '],                           // throw
+    [/попробывать(\s+|\s*{)/g, 'try$1'],                 // try
+    [/тип(\s+|\s*\()/g, 'typeof$1'],                     // typeof
+    [/пер(еменная)?\s+/g, 'var '],                       // var
+    [/пусто\s*\(/g, 'void('],                            // void
+    [/пока\s*\(/g, 'while ('],                           // while
+    [/совместно\s*\(/g, 'with ('],                       // with
+    [/уступить\s+/g, 'yield '],                          // yield
+    [/\.сократить\(\)/g, '.pop()'],                      // pop
+    [/\.добавить\(/g, '.push('],                         // push
+    [/\.отразить\(\)/g, '.reverse()'],                   // reverse
+    [/\.сдвинуть\(\)/g, '.shift()'],                     // shift
+    [/\.сортировать\(/g, '.sort('],                      // sort
+    [/\.соединить\(/g, '.splice('],                      // splice
+    [/\.раздвинуть\(/g, '.unshift('],                    // unshift
+    [/\.связать\(/g, '.concat('],                        // concat
+    [/\.объединить\(/g, '.join('],                       // join
+    [/\.срез\(/g, '.slice('],                            // slice
+    [/\.в(c|С)троку\(\)/g, '.toSrtring()'],              // toString
+    [/\.номер(В|в)\(/g, '.indexOf('],                    // indexOf
+    [/\.для(К|к)аждого\(/g, '.forEach('],                // forEach
+    [/\.каждый\(/g, '.every('],                          // every
+    [/\.хоть(О|о)дин\(/g, '.some('],                     // some
+    [/\.фильтр\(/g, '.filter('],                         // filter
+    [/\.карта\(/g, '.map('],                             // map
+    [/\.свести\(/g, '.reduce('],                         // reduce
+    [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
+    [/\.длинна/g, '.length'],                            // length
   ].forEach(function(en) {
-    content.replace(new RegExp(en[1], 'g', en[2]));
+    content = content.replace(en[0], en[1]);
   });
 
   return content;
