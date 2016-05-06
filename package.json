@@ -1,0 +1,22 @@
+{
+  "name": "pycckuu",
+  "version": "0.0.1",
+  "description": "Russian version of JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PycckuuJS/Pycckuu.git"
+  },
+  "keywords": [
+    "russia"
+  ],
+  "author": "Mihail Dunaev & Alexander Shved",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PycckuuJS/Pycckuu/issues"
+  },
+  "homepage": "https://github.com/PycckuuJS/Pycckuu#readme"
+}

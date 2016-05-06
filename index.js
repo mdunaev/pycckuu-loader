@@ -1,0 +1,68 @@
+module.exports = function(content) {
+	var templates = {
+			"alert":"внимание",
+			"console":"консоль",
+			"log":"логировать",
+			"break":"стоп",
+			"case":"случай",
+			"class":"класс",
+			"catch":"поймать",
+			"const":"константа",
+			"continue":"продолжить",
+			"default":"поумолчанию",
+			"delete":"удалить",
+			"do":"сделай",
+			"else":"иначе",
+			"export":"экспортировать",
+			"extends":"расширяет",
+			"finally":"вконце",
+			"for":"цикл",
+			"function":"функция",
+			"if":"если",
+			"import":"импортировать",
+			" in ":" в ",
+			"instanceof":"экземпляр",
+			"let":"пусть",
+			"new":"новый",
+			" of ":" из ",
+			"return":"вернуть",
+			"super":"супер",
+			"switch":"перебрать",
+			"this":"тут",
+			"throw":"бросить",
+			"try":"попробывать",
+			"typeof(":"тип(",
+			"var ":"пер ",
+			"void":"пусто",
+			"while":"пока",
+			"with":"совместно",
+			"yield":"уступить",
+			"pop":"вставить",
+			"push":"впихнуть",
+			"reverse":"отразить",
+			"shift":"сдвинуть",
+			"sort":"сортировать",
+			"splice":"соединить",
+			"unshift":"раздвинуть",
+			"concat":"связать",
+			"join":"объединить ",
+			"slice":"часть",
+			"toString":"вСтроку",
+			"indexOf":"номерВ",
+			"forEach":"дляКаждого",
+			"every":"каждый",
+			"some":"хотьОдин",
+			"filter":"фильтр",
+			"map":"карта",
+			"reduce":"уменьшить",
+			"prototype":"прототип",
+			"length  ":"длинна"
+		};
+	
+	for(var eng in templates){
+		var rus = templates[eng]
+		content = content.split(rus).join(eng);
+	}
+
+    return content;
+}
