@@ -30,7 +30,7 @@ module.exports = function(содержимое) {
     [/перебрать\s*\(/g, 'switch ('],                     // switch
     [/тут|этот/g, ' this'],                              // this
     [/бросить\s+/g, 'throw '],                           // throw
-    [/попробывать(\s+|\s*{)/g, 'try$1'],                 // try
+    [/попробовать(\s+|\s*{)/g, 'try$1'],                 // try
     [/тип(\s+|\s*\()/g, 'typeof$1'],                     // typeof
     [/пер(еменная)?\s+/g, 'var '],                       // var
     [/пусто\s*\(/g, 'void('],                            // void
