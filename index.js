@@ -21,7 +21,7 @@ module.exports = function(содержимое) {
     [/если\s*\(/g, 'if ('],                              // if
     [/импортировать\s+/g, 'import '],                    // import
     [/\s+в\s+/g, ' in '],                                // in
-    [/\s+экземпляр(\s+|\()/g, ' instanceof$1'],          // instanceo
+    [/\s+экземпляр(\s+|\()/g, ' instanceof$1'],          // instanceof
     [/пусть\s+/g, 'let '],                               // let
     [/новый\s+/g, 'new '],                               // new
     [/\s+из\s+/g, ' of '],                               // of
@@ -29,22 +29,22 @@ module.exports = function(содержимое) {
     [/супер\s*\(/g, 'super('],                           // super
     [/перебрать\s*\(/g, 'switch ('],                     // switch
     [/тут|этот/g, ' this'],                              // this
-    [/бросить\s+/g, 'throw '],                           // throw
+    [/бросить|кинуть\s+/g, 'throw '],                    // throw
     [/попробовать(\s+|\s*{)/g, 'try$1'],                 // try
     [/тип(\s+|\s*\()/g, 'typeof$1'],                     // typeof
     [/пер(еменная)?\s+/g, 'var '],                       // var
     [/пусто\s*\(/g, 'void('],                            // void
-    [/пока\s*\(/g, 'while ('],                           // while
+    [/пока(мест)\s*\(/g, 'while ('],                     // while
     [/совместно\s*\(/g, 'with ('],                       // with
     [/уступить\s+/g, 'yield '],                          // yield
-    [/\.сократить\(\)/g, '.pop()'],                      // pop
-    [/\.добавить\(/g, '.push('],                         // push
-    [/\.отразить\(\)/g, '.reverse()'],                   // reverse
+    [/\.сократить|вынуть\(\)/g, '.pop()'],               // pop
+    [/\.добавить|сунуть\(/g, '.push('],                  // push
+    [/\.отразить|развернуть\(\)/g, '.reverse()'],        // reverse
     [/\.сдвинуть\(\)/g, '.shift()'],                     // shift
     [/\.сортировать\(/g, '.sort('],                      // sort
     [/\.соединить\(/g, '.splice('],                      // splice
     [/\.раздвинуть\(/g, '.unshift('],                    // unshift
-    [/\.связать\(/g, '.concat('],                        // concat
+    [/\.связать|склеить\(/g, '.concat('],                // concat
     [/\.объединить\(/g, '.join('],                       // join
     [/\.срез\(/g, '.slice('],                            // slice
     [/\.в(c|С)троку\(\)/g, '.toSrtring()'],              // toString
@@ -52,7 +52,7 @@ module.exports = function(содержимое) {
     [/\.для(К|к)аждого\(/g, '.forEach('],                // forEach
     [/\.каждый\(/g, '.every('],                          // every
     [/\.хоть(О|о)дин\(/g, '.some('],                     // some
-    [/\.фильтр\(/g, '.filter('],                         // filter
+    [/\.фильтр(овать)\(/g, '.filter('],                  // filter
     [/\.карта\(/g, '.map('],                             // map
     [/\.свести\(/g, '.reduce('],                         // reduce
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
