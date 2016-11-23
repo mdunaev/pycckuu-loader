@@ -84,7 +84,7 @@ void | пусто
 while | пока
 with | совместно
 yield | уступить
-pop | вставить
+pop | вынуть
 push | впихнуть
 reverse | отразить
 shift | сдвинуть
